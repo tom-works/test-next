@@ -3,20 +3,19 @@ import Styles from "../styles/Home.module.css";
 import Link from "next/link";
 import Header from "./components/Header";
 import Content from "./components/Content";
-import useSWR from "swr";
+import { Heading } from "@chakra-ui/react";
 
 export default function Home() {
   let title = "ABC";
-  const { data, error } = useSWR("/api/message");
-  if (error) return <div>fail to load</div>;
-  if (!data) return <div>loading....</div>;
 
   return (
     <>
       <Content>
-        <Head></Head>
         <Header title={title} />
-        <p>{data.message}</p>
+        <Heading as="h1" size="4xl" isTruncated>
+          (4xl) In love with React & Next
+        </Heading>
+
         <h2>GitHubも練習</h2>
         <p>Nextの練習</p>
         <div>
