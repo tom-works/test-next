@@ -17,7 +17,7 @@ export default function Home() {
         <Head></Head>
         <Header title={title} />
         <p>{data.message}</p>
-        <h2>ともすた</h2>
+        <h2>GitHubも練習</h2>
         <p>Nextの練習</p>
         <div>
           <Link href="/about">
